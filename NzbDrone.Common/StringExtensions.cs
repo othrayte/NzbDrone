@@ -39,7 +39,7 @@ namespace NzbDrone.Common
 
         public static string RemoveAccent(this string txt)
         {
-            var bytes = Encoding.GetEncoding("Cyrillic").GetBytes(txt);
+            var bytes = Encoding.GetEncoding("ascii").GetBytes(txt);
             return Encoding.ASCII.GetString(bytes);
         }
     }
